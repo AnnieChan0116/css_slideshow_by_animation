@@ -1,2 +1,2 @@
 # slideshow_by_css
-Display slides in turn using pure css
+Slides show by css animation.
