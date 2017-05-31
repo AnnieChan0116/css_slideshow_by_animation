@@ -1,0 +1,186 @@
+* {
+    margin:0;
+    padding:0;
+}
+#container {
+    position:relative;
+    width:1000px;
+    height:526px;
+    margin:30px auto;
+    border:1px solid #9cc5ef;
+    overflow:hidden;
+}
+#items {
+    list-style-type:none;
+    width:500%;
+    height:100%;
+    font:100px/400px Microsoft Yahei;
+    text-align:center;
+    color:#fff;
+    margin-left:0;
+    -webkit-animation:item-1 8s ease-out infinite;
+}
+
+#items li {
+    float:left;
+    width:1000px;
+    height:100%;
+}
+
+#items li:nth-child(1) {
+    background-image:url(assets/images/NOne.jpg);
+}
+
+#items li:nth-child(2) {
+    background-image:url(assets/images/NTwo.jpg);
+}
+
+#items li:nth-child(3) {
+    background-image:url(assets/images/NThree.jpg);
+}
+#items li:nth-child(4) {
+    background-image:url(assets/images/NFour.jpg);
+}
+#items li:nth-child(5) {
+    background-image:url(assets/images/NFive.jpg);
+}
+
+@-webkit-keyframes item-1 {
+    0% { margin-left:0;}
+    13% { margin-left:0;}
+    23% { margin-left:-1000px;}
+    33% { margin-left:-1000px;}
+    43% { margin-left:-2000px;}
+    53% { margin-left:-2000px;}
+    63% { margin-left:-3000px;}
+    73% { margin-left:-3000px;}
+    83% { margin-left:-4000px;}
+    93% { margin-left:-4000px;}
+    100% {margin-left:0;}
+}
+
+@-webkit-keyframes item-2 {
+    0% { margin-left:-1000px;}
+    13% { margin-left:-1000px;}
+    23% { margin-left:-2000px;}
+    33% { margin-left:-2000px;}
+    43% { margin-left:-3000px;}
+    53% { margin-left:-3000px;}
+    63% { margin-left:-4000px;}
+    73% { margin-left:-4000px;}
+    83% { margin-left:0px;}
+    93% { margin-left:0px;}
+    100% {margin-left:-1000px;}
+}
+
+@-webkit-keyframes item-3 {
+    0% { margin-left:-2000px;}
+    13% { margin-left:-2000px;}
+    23% { margin-left:-3000px;}
+    33% { margin-left:-3000px;}
+    43% { margin-left:-4000px;}
+    53% { margin-left:-4000px;}
+    63% { margin-left:0px;}
+    73% { margin-left:0px;}
+    83% { margin-left:-1000px;}
+    93% { margin-left:-1000px;}
+    100% {margin-left:-2000px;}
+ }
+@-webkit-keyframes item-4 {
+    0% { margin-left:-3000px;}
+    13% { margin-left:-3000px;}
+    23% { margin-left:-4000px;}
+    33% { margin-left:-4000px;}
+    43% { margin-left:0px;}
+    53% { margin-left:0px;}
+    63% { margin-left:-1000px;}
+    73% { margin-left:-1000px;}
+    83% { margin-left:-2000px;}
+    93% { margin-left:-2000px;}
+    100% {margin-left:-3000px;}
+}
+@-webkit-keyframes item-5 {
+    0% { margin-left:-4000px;}
+    13% { margin-left:-4000px;}
+    23% { margin-left:0px;}
+    33% { margin-left:0px;}
+    43% { margin-left:-1000px;}
+    53% { margin-left:-1000px;}
+    63% { margin-left:-2000px;}
+    73% { margin-left:-2000px;}
+    83% { margin-left:-3000px;}
+    93% { margin-left:-3000px;}
+    100% {margin-left:-4000px;}
+}
+
+#click1:checked~ #container #items {
+    -webkit-animation-name:item-1;
+}
+#click2:checked~ #container #items {
+       -webkit-animation-name:item-2;
+   }
+
+#click3:checked ~ #container #items {
+    -webkit-animation-name:item-3;
+}
+#click4:checked ~ #container #items {
+    -webkit-animation-name:item-4;
+}
+
+#click5:checked ~ #container #items {
+    -webkit-animation-name:item-5;
+}
+
+
+/*点击按钮，暂时停止播放动画*/
+#click1:active ~ #container #items {
+    -webkit-animation-name:none;
+    margin-left:0;
+}
+
+#click2:active ~ #container #items {
+    -webkit-animation-name:none;
+    margin-left:-1000px;
+}
+
+#click3:active ~ #container #items {
+    -webkit-animation-name:none;
+    margin-left:-2000px;
+}
+#click4:active ~ #container #items {
+    -webkit-animation-name:none;
+    margin-left:-3000px;
+}
+#click5:active ~ #container #items {
+    -webkit-animation-name:none;
+    margin-left:-4000px;
+}
+#opts {
+    position: absolute;
+    bottom:20px;
+    right: 80px;
+    text-align: center;
+    z-index: 9999;
+}
+
+#opts label {
+    float:left;
+    width:20px;
+    height:20px;
+    border-radius:20px;
+    margin-right:5px;
+    background:#696969;
+    opacity:0.7;
+    cursor:pointer;
+}
+
+#opts label:hover {
+    background:#fff;
+}
+
+/* 隐藏radio*/
+#click1, #click2, #click3 ,#click4,#click5{
+    position:absolute;
+    opacity:0;
+}
+
